@@ -1,0 +1,34 @@
+package exercise;
+import java.util.Scanner;
+public class Exercise1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		
+		int password=999999,enter_password,i;
+	
+		
+		System.out.println("Please enter your password");
+		enter_password=sc.nextInt();
+		
+		if(enter_password==password) {
+			System.out.println("Access Granted");			
+		}
+		
+		if(enter_password!=password) {
+				for(i=2;i>0;i--) {
+			      System.out.println("Password Wrong, enter again");
+			      enter_password=sc.nextInt();
+			         if(enter_password==password) {
+				     System.out.println("Access Granted");
+				     System.exit(0);}}}
+		
+		if(enter_password!=password) {
+				System.out.println("Card is invalid");}
+		
+
+
+	}
+
+}
