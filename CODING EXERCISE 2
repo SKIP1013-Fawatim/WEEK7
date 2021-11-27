@@ -1,0 +1,62 @@
+package exercise;
+import java.util.Scanner;
+public class UpgradeEx2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		
+		String password1, password2;
+		boolean flag=false;
+		int i, c, ch_num=8, numCount=0, charCount=0;
+		char ch;
+		
+		System.out.println("create your password with 8 characters combination of number, uppercase and lowercase letter ");
+		password1=sc.nextLine();
+		
+
+		System.out.println();
+		
+		System.out.println("password create details");
+		for(i=0;i<password1.length();i++){
+		    ch = password1.charAt(i);
+		    System.out.println(i+" "+ch);
+		    if(ch >= '0' && ch <= '9') {
+				numCount++;}
+		    else if (ch >= 'A' && ch <= 'Z') {
+				charCount++;}}
+		
+		
+		System.out.println();	
+		if((ch_num==password1.length())	&&	(charCount >= 1) && (numCount >= 1)){		
+			System.out.println("password is valid");
+			System.out.println();
+			System.out.println("verified your password");
+			password2=sc.nextLine();
+			
+			if(password2.equals(password1)) {
+				System.out.println();
+			    System.out.println("confirmation password details");	
+			   for(c=0;c<password2.length();c++){
+			       ch = password2.charAt(c);
+			       System.out.println(c+" "+ch);}
+			   System.out.println();
+				System.out.println("password match");}
+			
+			else {
+				while(!flag){
+				System.out.println("password not match");
+				System.out.println("enter confirmation password again");
+				password2=sc.nextLine();
+				
+				if(password2.equals(password1)) {
+					System.out.println("password match");
+					flag=true;}}}}
+				
+		  else {
+		    System.out.println("Password is not valid");}
+		    	
+
+	}
+
+}
